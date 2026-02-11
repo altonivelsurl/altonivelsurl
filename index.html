@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Sitio Web de Muestra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a mi sitio web</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Inicio</h2>
+    <p>Este es un sitio web de ejemplo creado para practicar GitHub Pages.</p>
+    <button onclick="mostrarMensaje()">Haz clic aquí</button>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre mí</h2>
+    <p>Me gusta aprender sobre desarrollo web y compartir proyectos en GitHub.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme a: <a href="mailto:ejemplo@email.com">ejemplo@email.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Mi Sitio Web</p>
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      alert("¡Gracias por visitar mi sitio web!");
+    }
+  </script>
+</body>
+</html>
