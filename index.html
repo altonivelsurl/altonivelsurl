@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para iconos (versión gratuita) -->
+    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -19,7 +19,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            color: #2C3E50; /* grafito */
+            color: #2C3E50;
             line-height: 1.6;
             background-color: #F4F6F7;
         }
@@ -36,9 +36,9 @@
             margin: 0 auto;
         }
 
-        /* HEADER Y NAVEGACIÓN */
+        /* HEADER */
         header {
-            background-color: #1A3B4B; /* azul petróleo */
+            background-color: #1A3B4B;
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -59,7 +59,7 @@
             margin: 0;
         }
         .logo span {
-            color: #C4A747; /* dorado */
+            color: #C4A747;
             font-size: 1rem;
             display: block;
             font-family: 'Roboto', sans-serif;
@@ -84,7 +84,6 @@
             color: #C4A747;
         }
 
-        /* Botón menú móvil */
         .menu-toggle {
             display: none;
             background: none;
@@ -96,7 +95,7 @@
 
         /* HERO */
         .hero {
-            background: linear-gradient(rgba(26, 59, 75, 0.85), rgba(26, 59, 75, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover fixed;
+            background: linear-gradient(rgba(26, 59, 75, 0.85), rgba(26, 59, 75, 0.85)), url('imagenes/imagen1.jpg') center/cover fixed;
             color: white;
             padding: 6rem 0;
             text-align: center;
@@ -105,7 +104,6 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
 
         .hero p {
@@ -131,10 +129,8 @@
         .btn:hover {
             background-color: #d6b75c;
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* SECCIONES */
         section {
             padding: 5rem 0;
         }
@@ -181,11 +177,6 @@
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
         }
 
         .stat-item i {
@@ -196,10 +187,9 @@
 
         .stat-item h4 {
             font-size: 1.2rem;
-            margin-bottom: 0.3rem;
         }
 
-        /* TARJETAS DE SERVICIOS */
+        /* SERVICIOS */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -220,7 +210,6 @@
         .service-card:hover {
             border-bottom-color: #C4A747;
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .service-icon {
@@ -234,7 +223,7 @@
             margin-bottom: 0.8rem;
         }
 
-        /* FÁBRICA Y MATERIALES */
+        /* CATÁLOGO DE MATERIALES */
         .catalogo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -273,7 +262,7 @@
             font-weight: 500;
         }
 
-        /* PORTFOLIO FILTRABLE */
+        /* PORTFOLIO */
         .filter-buttons {
             display: flex;
             justify-content: center;
@@ -290,7 +279,6 @@
             border-radius: 30px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
         }
 
         .filter-btn.active, .filter-btn:hover {
@@ -308,9 +296,8 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            cursor: pointer;
             position: relative;
+            cursor: pointer;
         }
 
         .portfolio-item img {
@@ -334,10 +321,6 @@
 
         .portfolio-item:hover .overlay {
             transform: translateY(0);
-        }
-
-        .portfolio-item:hover {
-            transform: scale(1.02);
         }
 
         /* CONTACTO */
@@ -377,7 +360,6 @@
             text-decoration: none;
             font-weight: 600;
             margin-top: 1rem;
-            transition: all 0.3s;
         }
 
         .whatsapp-btn:hover {
@@ -398,8 +380,8 @@
         }
 
         input:focus, select:focus, textarea:focus {
-            outline: none;
             border-color: #C4A747;
+            outline: none;
         }
 
         .btn-submit {
@@ -412,7 +394,6 @@
             cursor: pointer;
             width: 100%;
             font-size: 1.2rem;
-            transition: all 0.3s;
         }
 
         .btn-submit:hover {
@@ -427,7 +408,6 @@
             margin-top: 3rem;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -457,10 +437,6 @@
             .about-grid, .contacto-grid {
                 grid-template-columns: 1fr;
             }
-
-            .section-title {
-                font-size: 2rem;
-            }
         }
     </style>
 </head>
@@ -486,7 +462,6 @@
     </header>
 
     <main>
-        <!-- HERO (Inicio) -->
         <section id="inicio" class="hero">
             <div class="container">
                 <h1>Alto Nivel SURL</h1>
@@ -495,12 +470,11 @@
             </div>
         </section>
 
-        <!-- Quiénes somos (Valor integral) -->
         <section class="container">
             <h2 class="section-title">De la fábrica a tu hogar o empresa</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>En <strong>Alto Nivel SURL</strong> somos mucho más que una constructora. Controlamos todo el proceso: fabricamos nuestros propios materiales de alta calidad (hormigón, pinturas, prefabricados), los distribuimos en nuestra ferretería especializada y los aplicamos en obra con nuestros equipos técnicos. Un solo interlocutor para proyectos residenciales, comerciales e industriales.</p>
+                    <p>En <strong>Alto Nivel SURL</strong> somos mucho más que una constructora. Controlamos todo el proceso: fabricamos nuestros propios materiales de alta calidad, los distribuimos en nuestra ferretería especializada y los aplicamos en obra con nuestros equipos técnicos. Un solo interlocutor para proyectos residenciales, comerciales e industriales.</p>
                     <p><strong>Disponibilidad 24/7 para urgencias y consultas.</strong></p>
                 </div>
                 <div class="about-stats">
@@ -524,7 +498,6 @@
             </div>
         </section>
 
-        <!-- SERVICIOS: Construcción -->
         <section id="construccion" style="background: white;">
             <div class="container">
                 <h2 class="section-title">Construcción de Edificios</h2>
@@ -548,7 +521,6 @@
             </div>
         </section>
 
-        <!-- SERVICIOS: Reformas -->
         <section id="reformas">
             <div class="container">
                 <h2 class="section-title">Reformas y Acabados</h2>
@@ -572,7 +544,6 @@
             </div>
         </section>
 
-        <!-- SERVICIOS: Instalaciones y Mantenimiento -->
         <section id="instalaciones" style="background: white;">
             <div class="container">
                 <h2 class="section-title">Instalaciones y Mantenimiento</h2>
@@ -601,30 +572,29 @@
             </div>
         </section>
 
-        <!-- FÁBRICA Y MATERIALES (catálogo visual) -->
         <section id="materiales">
             <div class="container">
                 <h2 class="section-title">Nuestro Catálogo de Materiales</h2>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Al ser fabricantes, garantizamos la mejor relación calidad-precio. Estos son algunos de los productos que puedes adquirir directamente en nuestro almacén o solicitar para tu obra.</p>
                 <div class="catalogo-grid">
                     <div class="catalogo-item">
-                        <img src="https://images.unsplash.com/photo-1589931793097-5e49a5b9b3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Hormigón">
+                        <img src="imagenes/imagen2.jpg" alt="Hormigón">
                         <div class="catalogo-label">Hormigón Prefabricado</div>
                     </div>
                     <div class="catalogo-item">
-                        <img src="https://images.unsplash.com/photo-1562259920-46afc30e9f8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Pinturas">
+                        <img src="imagenes/imagen3.jpg" alt="Pinturas">
                         <div class="catalogo-label">Pinturas y Barnices</div>
                     </div>
                     <div class="catalogo-item">
-                        <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Ferretería">
+                        <img src="imagenes/imagen4.jpg" alt="Ferretería">
                         <div class="catalogo-label">Ferretería General</div>
                     </div>
                     <div class="catalogo-item">
-                        <img src="https://images.unsplash.com/photo-1589931793019-197a6a9b8a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Cemento">
+                        <img src="imagenes/imagen5.jpg" alt="Cemento">
                         <div class="catalogo-label">Cemento y Yeso</div>
                     </div>
                     <div class="catalogo-item">
-                        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Vidrio">
+                        <img src="imagenes/imagen6.jpg" alt="Vidrio">
                         <div class="catalogo-label">Vidrio y Espejos</div>
                     </div>
                 </div>
@@ -634,7 +604,6 @@
             </div>
         </section>
 
-        <!-- PROYECTOS (Portfolio) -->
         <section id="proyectos" style="background: white;">
             <div class="container">
                 <h2 class="section-title">Obras que hablan por sí solas</h2>
@@ -645,36 +614,34 @@
                     <button class="filter-btn" data-filter="jardineria">Jardinería</button>
                 </div>
                 <div class="portfolio-grid" id="portfolioGrid">
-                    <!-- Las imágenes son placeholders representativos. Luego las reemplazarás por las reales -->
                     <div class="portfolio-item" data-category="construccion">
-                        <img src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Edificio moderno">
+                        <img src="imagenes/imagen7.jpg" alt="Edificio moderno">
                         <div class="overlay"><h4>Edificio Torres del Sol</h4><p>Construcción 2024</p></div>
                     </div>
                     <div class="portfolio-item" data-category="reforma">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Cocina reformada">
+                        <img src="imagenes/imagen8.jpg" alt="Cocina reformada">
                         <div class="overlay"><h4>Reforma integral cocina</h4><p>Acabados de lujo</p></div>
                     </div>
                     <div class="portfolio-item" data-category="jardineria">
-                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Jardín paisajístico">
+                        <img src="imagenes/imagen9.jpg" alt="Jardín paisajístico">
                         <div class="overlay"><h4>Jardín residencial</h4><p>Paisajismo y riego</p></div>
                     </div>
                     <div class="portfolio-item" data-category="construccion">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112c4e3b1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Nave industrial">
+                        <img src="imagenes/imagen10.jpg" alt="Nave industrial">
                         <div class="overlay"><h4>Nave logística</h4><p>Construcción llave en mano</p></div>
                     </div>
                     <div class="portfolio-item" data-category="reforma">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd0b2e8b9d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Baño moderno">
+                        <img src="imagenes/imagen11.jpg" alt="Baño moderno">
                         <div class="overlay"><h4>Baño de diseño</h4><p>Reforma completa</p></div>
                     </div>
                     <div class="portfolio-item" data-category="jardineria">
-                        <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Piscina y jardín">
+                        <img src="imagenes/imagen12.jpg" alt="Piscina y jardín">
                         <div class="overlay"><h4>Piscina y área verde</h4><p>Mantenimiento integral</p></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACTO -->
         <section id="contacto">
             <div class="container">
                 <div class="contacto-grid">
@@ -724,7 +691,6 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT para menú móvil y filtros -->
     <script>
         // Menú hamburguesa
         const menuToggle = document.getElementById('menuToggle');
@@ -733,20 +699,18 @@
             mainMenu.classList.toggle('show');
         });
 
-        // Cerrar menú al hacer clic en un enlace (móvil)
         document.querySelectorAll('#mainMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 mainMenu.classList.remove('show');
             });
         });
 
-        // Filtro de portfolio
+        // Filtros del portfolio
         const filterButtons = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Quitar active de todos
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
 
@@ -762,10 +726,10 @@
             });
         });
 
-        // Prevenir envío del formulario para que puedas probar sin backend
+        // Evitar envío real del formulario (modo demo)
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Gracias por contactar con Alto Nivel SURL. Te responderemos a la mayor brevedad posible. (Modo demostración)');
+            alert('Gracias por contactar con Alto Nivel SURL. Te responderemos pronto.');
         });
     </script>
 </body>
