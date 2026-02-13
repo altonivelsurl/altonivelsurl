@@ -1,105 +1,772 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AltoNivel S.U.R.L - Empresa de Construcciones</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 2rem;
-    }
-    .hero {
-      background: url('https://via.placeholder.com/1200x400') no-repeat center center;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .btn {
-      background: #e67e22;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    .btn:hover {
-      background: #d35400;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #222;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alto Nivel SURL · Construcción Integral</title>
+    <!-- Fuentes elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos (versión gratuita) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #2C3E50; /* grafito */
+            line-height: 1.6;
+            background-color: #F4F6F7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* HEADER Y NAVEGACIÓN */
+        header {
+            background-color: #1A3B4B; /* azul petróleo */
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            color: white;
+            margin: 0;
+        }
+        .logo span {
+            color: #C4A747; /* dorado */
+            font-size: 1rem;
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #C4A747;
+        }
+
+        /* Botón menú móvil */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(26, 59, 75, 0.85), rgba(26, 59, 75, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover fixed;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #C4A747;
+            color: #1A3B4B;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .btn:hover {
+            background-color: #d6b75c;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1A3B4B;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #C4A747;
+            margin: 0.5rem auto 0;
+        }
+
+        /* QUIENES SOMOS */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-item i {
+            font-size: 2.5rem;
+            color: #C4A747;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* TARJETAS DE SERVICIOS */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            border-bottom-color: #C4A747;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: #1A3B4B;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* FÁBRICA Y MATERIALES */
+        .catalogo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .catalogo-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .catalogo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .catalogo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .catalogo-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* PORTFOLIO FILTRABLE */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid #1A3B4B;
+            color: #1A3B4B;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: #1A3B4B;
+            color: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 59, 75, 0.9);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* CONTACTO */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .contacto-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1A3B4B;
+        }
+
+        .contacto-info p {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contacto-info i {
+            color: #C4A747;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #C4A747;
+        }
+
+        .btn-submit {
+            background: #1A3B4B;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #0f2a36;
+        }
+
+        footer {
+            background: #1A3B4B;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1A3B4B;
+                padding: 1rem;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid, .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>AltoNivel S.U.R.L</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <h2>ALTO NIVEL <span>SURL</span></h2>
+            </div>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#construccion">Construcción</a></li>
+                    <li><a href="#reformas">Reformas</a></li>
+                    <li><a href="#instalaciones">Instalaciones</a></li>
+                    <li><a href="#materiales">Materiales</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section class="hero" id="inicio">
-    <h1>Construimos el futuro de Cuba</h1>
-    <p>Soluciones integrales en construcción y diseño arquitectónico.</p>
-    <button class="btn" onclick="alert('Gracias por confiar en AltoNivel S.U.R.L')">Conócenos</button>
-  </section>
+    <main>
+        <!-- HERO (Inicio) -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>Alto Nivel SURL</h1>
+                <p>Construimos, reformamos y equipamos tu espacio. Fabricantes y distribuidores de materiales.</p>
+                <a href="#contacto" class="btn">Solicita información</a>
+            </div>
+        </section>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <p>Ofrecemos servicios de construcción, remodelación, diseño arquitectónico y gestión de proyectos.</p>
-  </section>
+        <!-- Quiénes somos (Valor integral) -->
+        <section class="container">
+            <h2 class="section-title">De la fábrica a tu hogar o empresa</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>En <strong>Alto Nivel SURL</strong> somos mucho más que una constructora. Controlamos todo el proceso: fabricamos nuestros propios materiales de alta calidad (hormigón, pinturas, prefabricados), los distribuimos en nuestra ferretería especializada y los aplicamos en obra con nuestros equipos técnicos. Un solo interlocutor para proyectos residenciales, comerciales e industriales.</p>
+                    <p><strong>Disponibilidad 24/7 para urgencias y consultas.</strong></p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-industry"></i>
+                        <h4>Fabricación Propia</h4>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-key"></i>
+                        <h4>Llave en Mano</h4>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>Instalaciones y Mantenimiento</h4>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-store"></i>
+                        <h4>Venta de Materiales</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="proyectos">
-    <h2>Proyectos destacados</h2>
-    <p>Hemos participado en obras residenciales, comerciales e industriales en toda Cuba.</p>
-  </section>
+        <!-- SERVICIOS: Construcción -->
+        <section id="construccion" style="background: white;">
+            <div class="container">
+                <h2 class="section-title">Construcción de Edificios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-building"></i></div>
+                        <h3>Obra Nueva Residencial</h3>
+                        <p>Viviendas unifamiliares, edificios de apartamentos con acabados de alto nivel.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-warehouse"></i></div>
+                        <h3>Naves Industriales</h3>
+                        <p>Proyectos llave en mano para almacenes, fábricas y locales comerciales.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-city"></i></div>
+                        <h3>Promociones Inmobiliarias</h3>
+                        <p>Desarrollamos tu terreno o gestionamos la construcción para promotores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Dirección: La Habana, Cuba</p>
-    <p>Teléfono: +53 555-55555</p>
-    <p>Email: <a href="mailto:contacto@altonivel.cu">contacto@altonivel.cu</a></p>
-  </section>
+        <!-- SERVICIOS: Reformas -->
+        <section id="reformas">
+            <div class="container">
+                <h2 class="section-title">Reformas y Acabados</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-home"></i></div>
+                        <h3>Reformas Integrales</h3>
+                        <p>Renovación completa de viviendas, oficinas y locales. Llave en mano.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                        <h3>Acabados de Lujo</h3>
+                        <p>Pintura, yeso, suelos, falsos techos y detalles de alta gama.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bath"></i></div>
+                        <h3>Cocinas y Baños</h3>
+                        <p>Diseño y renovación de espacios con materiales de primera calidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2026 AltoNivel S.U.R.L - Todos los derechos reservados</p>
-  </footer>
+        <!-- SERVICIOS: Instalaciones y Mantenimiento -->
+        <section id="instalaciones" style="background: white;">
+            <div class="container">
+                <h2 class="section-title">Instalaciones y Mantenimiento</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Electricidad</h3>
+                        <p>Instalaciones nuevas, reparaciones, cuadros eléctricos y certificados.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-water"></i></div>
+                        <h3>Fontanería</h3>
+                        <p>Redes de agua, desagües, calderas y reparación de averías 24h.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-wind"></i></div>
+                        <h3>Climatización</h3>
+                        <p>Aire acondicionado, ventilación, mantenimiento de sistemas.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-seedling"></i></div>
+                        <h3>Jardinería y Paisajismo</h3>
+                        <p>Diseño de áreas verdes, mantenimiento, riego automático.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FÁBRICA Y MATERIALES (catálogo visual) -->
+        <section id="materiales">
+            <div class="container">
+                <h2 class="section-title">Nuestro Catálogo de Materiales</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Al ser fabricantes, garantizamos la mejor relación calidad-precio. Estos son algunos de los productos que puedes adquirir directamente en nuestro almacén o solicitar para tu obra.</p>
+                <div class="catalogo-grid">
+                    <div class="catalogo-item">
+                        <img src="https://images.unsplash.com/photo-1589931793097-5e49a5b9b3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Hormigón">
+                        <div class="catalogo-label">Hormigón Prefabricado</div>
+                    </div>
+                    <div class="catalogo-item">
+                        <img src="https://images.unsplash.com/photo-1562259920-46afc30e9f8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Pinturas">
+                        <div class="catalogo-label">Pinturas y Barnices</div>
+                    </div>
+                    <div class="catalogo-item">
+                        <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Ferretería">
+                        <div class="catalogo-label">Ferretería General</div>
+                    </div>
+                    <div class="catalogo-item">
+                        <img src="https://images.unsplash.com/photo-1589931793019-197a6a9b8a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Cemento">
+                        <div class="catalogo-label">Cemento y Yeso</div>
+                    </div>
+                    <div class="catalogo-item">
+                        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Vidrio">
+                        <div class="catalogo-label">Vidrio y Espejos</div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#contacto" class="btn">Consultar disponibilidad y precios</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS (Portfolio) -->
+        <section id="proyectos" style="background: white;">
+            <div class="container">
+                <h2 class="section-title">Obras que hablan por sí solas</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="construccion">Construcción</button>
+                    <button class="filter-btn" data-filter="reforma">Reforma</button>
+                    <button class="filter-btn" data-filter="jardineria">Jardinería</button>
+                </div>
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Las imágenes son placeholders representativos. Luego las reemplazarás por las reales -->
+                    <div class="portfolio-item" data-category="construccion">
+                        <img src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Edificio moderno">
+                        <div class="overlay"><h4>Edificio Torres del Sol</h4><p>Construcción 2024</p></div>
+                    </div>
+                    <div class="portfolio-item" data-category="reforma">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Cocina reformada">
+                        <div class="overlay"><h4>Reforma integral cocina</h4><p>Acabados de lujo</p></div>
+                    </div>
+                    <div class="portfolio-item" data-category="jardineria">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Jardín paisajístico">
+                        <div class="overlay"><h4>Jardín residencial</h4><p>Paisajismo y riego</p></div>
+                    </div>
+                    <div class="portfolio-item" data-category="construccion">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112c4e3b1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Nave industrial">
+                        <div class="overlay"><h4>Nave logística</h4><p>Construcción llave en mano</p></div>
+                    </div>
+                    <div class="portfolio-item" data-category="reforma">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd0b2e8b9d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Baño moderno">
+                        <div class="overlay"><h4>Baño de diseño</h4><p>Reforma completa</p></div>
+                    </div>
+                    <div class="portfolio-item" data-category="jardineria">
+                        <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Piscina y jardín">
+                        <div class="overlay"><h4>Piscina y área verde</h4><p>Mantenimiento integral</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <div class="container">
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <h3>¿Hablamos de tu próximo proyecto?</h3>
+                        <p><i class="fas fa-phone-alt"></i> <strong>Teléfono 24/7:</strong> <a href="tel:+5354759672" style="color: #1A3B4B; text-decoration: none;">+53 5 4759672</a></p>
+                        <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 24 horas, 7 días a la semana</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@altonivelsurl.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Próximamente almacén físico</p>
+                        <a href="https://wa.me/5354759672?text=Hola%2C%20estoy%20interesado%20en%20los%20servicios%20de%20Alto%20Nivel%20SURL" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp</a>
+                    </div>
+                    <div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option>Selecciona el área de interés</option>
+                                    <option>Construcción</option>
+                                    <option>Reforma / Acabados</option>
+                                    <option>Instalación / Mantenimiento</option>
+                                    <option>Compra de materiales</option>
+                                    <option>Otros</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="4" placeholder="Cuéntanos tu proyecto o consulta..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Enviar solicitud</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Alto Nivel SURL · Construcción Integral · Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT para menú móvil y filtros -->
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.getElementById('menuToggle');
+        const mainMenu = document.getElementById('mainMenu');
+        menuToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('show');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (móvil)
+        document.querySelectorAll('#mainMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('show');
+            });
+        });
+
+        // Filtro de portfolio
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Quitar active de todos
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'todos' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Prevenir envío del formulario para que puedas probar sin backend
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por contactar con Alto Nivel SURL. Te responderemos a la mayor brevedad posible. (Modo demostración)');
+        });
+    </script>
 </body>
 </html>
-
